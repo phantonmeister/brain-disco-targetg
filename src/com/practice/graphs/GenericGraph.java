@@ -16,8 +16,8 @@ public class GenericGraph<T> {
     }
 
     public void addEdge(T source, T destination){
-        map.putIfAbsent(source, new ArrayList<T>());
-        map.putIfAbsent(destination, new ArrayList<T>());
+        map.putIfAbsent(source, new ArrayList<>());
+        map.putIfAbsent(destination, new ArrayList<>());
         map.get(source).add(destination);
     }
 
@@ -31,12 +31,10 @@ public class GenericGraph<T> {
             }
             builder.append("\n");
         }
-
         return (builder.toString());
         }
 
     public static void main(String... args){
-
         GenericGraph<Integer> g = new GenericGraph<>();
         g.addEdge(0, 1);
         g.addEdge(0, 4);
@@ -47,7 +45,6 @@ public class GenericGraph<T> {
         g.addEdge(3, 4);
 
         // print the graph.
-        System.out.println("Graph:\n"
-                + g.toString());
+        System.out.println("Graph:\n"+ g);
     }
 }
