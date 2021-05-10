@@ -1,4 +1,4 @@
-package com.practice.arrays;
+package practice.arrays;
 
 public class MergeTwoSortedArrays {
 

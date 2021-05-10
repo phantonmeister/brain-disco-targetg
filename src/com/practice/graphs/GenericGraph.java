@@ -1,4 +1,4 @@
-package com.practice.graphs;
+package practice.graphs;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -27,7 +27,7 @@ public class GenericGraph<T> {
         for(T v : map.keySet()){
             builder.append(v.toString()).append(": ");
             for (T w : map.get(v)) {
-                builder.append(w.toString()).append(" ");
+                builder.append(w.toString()).append(",");
             }
             builder.append("\n");
         }
