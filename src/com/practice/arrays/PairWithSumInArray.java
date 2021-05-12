@@ -25,7 +25,7 @@ Naive solution is to use compare each element with others and add to see if it i
 For O(n) solution, sort the array. Take two pointers.
      */
 
-    static class Pair<U,V>{
+   private static class Pair<U,V>{
         public U a;
         public V b;
 
