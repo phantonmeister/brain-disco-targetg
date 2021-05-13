@@ -28,9 +28,7 @@ public static void topologicalOrdering(String node, List<String> visited, Graph 
     List<String> neighbors = g.adjacencyList.get(node);
     for(String l : neighbors){
         if(!visited.contains(l))
-        {
             topologicalOrdering(l, visited, g, s);
-        }
     }
     s.push(node);
 }

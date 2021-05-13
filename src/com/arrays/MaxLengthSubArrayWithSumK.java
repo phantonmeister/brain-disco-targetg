@@ -1,9 +1,8 @@
-package practice.arrays;
+package arrays;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
-import java.util.List;
 
 /*
 Given an integer array, find the maximum length subarray having a given Sum K

@@ -1,4 +1,4 @@
-package com.practice.strings;
+package string;
 
 public class ReverseAString {
 
