@@ -17,7 +17,6 @@ public class ReverseAString {
             }
             System.out.println(reverseBuilder.toString());
         }
-
     }
 
     public static void reverseAStringOption2(String input){
