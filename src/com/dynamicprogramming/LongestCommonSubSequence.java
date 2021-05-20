@@ -42,7 +42,4 @@ public class LongestCommonSubSequence {
         System.out.println(findLongestCommonSubSequence(charA,charB));
 
     }
-
-
-
 }
