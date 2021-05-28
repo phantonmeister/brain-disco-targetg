@@ -89,7 +89,7 @@ public class NQueens {
     }
 
     public static void main(String... args){
-        int numOfQueens = 100;
+        int numOfQueens = 4;
         List<List<Integer>> result = solveNQueens(numOfQueens);
         System.out.println(result);
     }
