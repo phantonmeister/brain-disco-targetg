@@ -1,21 +1,22 @@
-package graphs;
+package sorting;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Stack;
+import com.sun.org.apache.xpath.internal.operations.Bool;
+
+import java.util.*;
 
 public class TopologicalSorting {
+    public static class Graph{
+        HashMap<Integer, ArrayList<Integer>> adjacencyMap = new HashMap<>();
 
-    static class Graph {
-        public Map<Integer, ArrayList<Integer>> adjacencyMap = new HashMap<>();
-        public void addVertex(int v){
+        public  void addVertex(int v){
             adjacencyMap.putIfAbsent(v, new ArrayList<>());
         }
 
         public void addEdge(int source, int destination){
-            adjacencyMap.putIfAbsent(source, new ArrayList<>());
-            adjacencyMap.putIfAbsent(destination, new ArrayList<>());
+            addVertex(source);
+
+            addVertex(destination);
+
             adjacencyMap.get(source).add(destination);
         }
 
@@ -31,20 +32,21 @@ public class TopologicalSorting {
             }
             return (builder.toString());
         }
+
     }
 
-    static void topologicalSorting(int vertex, boolean[] visited, Stack<Integer> s, Graph g){
+    public static void topSort(int vertex, LinkedList<Integer> s, Graph  g, boolean[] visited){
         visited[vertex] = true;
         ArrayList<Integer> neighbors = g.adjacencyMap.get(vertex);
-        for(int j : neighbors){
-            if(!visited[j]){
-                topologicalSorting(j,visited,s,g);
+        for(int e : neighbors){
+            if(!visited[e]){
+                topSort(e, s, g, visited);
             }
         }
         s.push(vertex);
     }
 
-    public static void main (String... args){
+    public static void main(String... args){
         Graph g = new Graph();
         g.addEdge(0,1);
         g.addEdge(0,3);
@@ -56,19 +58,14 @@ public class TopologicalSorting {
         g.addEdge(5,6);
         System.out.println(g);
 
-        Stack<Integer> s = new Stack<>();
+        LinkedList<Integer> s = new LinkedList<Integer>() ;
         boolean[] visited = new boolean[g.adjacencyMap.keySet().size()];
-        for(int i : g.adjacencyMap.keySet()){
-            if(!visited[i]){
-                topologicalSorting(i, visited, s, g);
+
+        for(Integer e : g.adjacencyMap.keySet()){
+            if(!visited[e]){
+                topSort(e, s, g, visited);
             }
         }
-
-        int[] topologicalBuildOrder = new int[g.adjacencyMap.keySet().size()];
-
-        for (int i = topologicalBuildOrder.length-1; i >= 0; i--)
-           topologicalBuildOrder[i] = s.pop();
-       for(int k : topologicalBuildOrder)
-           System.out.println(k);
+        s.forEach(System.out::println);
     }
 }
