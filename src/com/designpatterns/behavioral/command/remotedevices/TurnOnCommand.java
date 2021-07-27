@@ -1,4 +1,4 @@
-package designpatterns.behavioral.command;
+package designpatterns.behavioral.command.remotedevices;
 
 public class TurnOnCommand implements Command{
     private Device device;

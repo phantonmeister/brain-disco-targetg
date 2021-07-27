@@ -1,4 +1,4 @@
-package designpatterns.behavioral.command;
+package designpatterns.behavioral.command.remotedevices;
 
 public class RemoteButton {
     //* This can extend or inherit from a Button interface. Not doing it here for simplicity.

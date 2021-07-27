@@ -1,6 +1,4 @@
-package designpatterns.behavioral.command;
-
-import java.util.List;
+package designpatterns.behavioral.command.remotedevices;
 
 public class RemoteControlDevice {
 

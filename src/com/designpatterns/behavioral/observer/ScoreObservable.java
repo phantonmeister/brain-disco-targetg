@@ -22,5 +22,4 @@ public class ScoreObservable {
             o.update(this.news);
         }
     }
-
 }
