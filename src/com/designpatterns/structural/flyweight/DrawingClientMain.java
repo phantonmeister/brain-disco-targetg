@@ -7,7 +7,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class DrawingClient extends JFrame{
+public class DrawingClientMain extends JFrame{
 
     private static final long serialVersionUID = -1350200437285282550L;
     private final int WIDTH;
@@ -16,7 +16,7 @@ public class DrawingClient extends JFrame{
     private static final ShapeFactory.ShapeType shapes[] = { ShapeType.LINE, ShapeType.OVAL_FILL,ShapeType.OVAL_NOFILL };
     private static final Color colors[] = { Color.RED, Color.GREEN, Color.YELLOW };
 
-    public DrawingClient(int width, int height){
+    public DrawingClientMain(int width, int height){
         this.WIDTH=width;
         this.HEIGHT=height;
         Container contentPane = getContentPane();
@@ -67,7 +67,7 @@ public class DrawingClient extends JFrame{
     }
 
     public static void main(String[] args) {
-        DrawingClient drawing = new DrawingClient(500,600);
+        DrawingClientMain drawing = new DrawingClientMain(500,600);
     }
 }
 
