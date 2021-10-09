@@ -28,17 +28,52 @@ public class Phone {
         return countryOfOrigin;
     }
 
-    public Phone(String phoneOS, String phoneManufacturer, int batteryCapacity, int phoneIMEI, String countryOfOrigin) {
-        this.phoneOS = phoneOS;
-        this.phoneManufacturer = phoneManufacturer;
-        this.batteryCapacity = batteryCapacity;
-        this.phoneIMEI = phoneIMEI;
-        this.countryOfOrigin = countryOfOrigin;
+    private Phone(PhoneBuilder builder) {
+        phoneOS = builder.phoneOS;
+        phoneManufacturer = builder.phoneManufacturer;
+        batteryCapacity = builder.batteryCapacity;
+        phoneIMEI = builder.phoneIMEI;
+        countryOfOrigin = builder.countryOfOrigin;
     }
+    public static class PhoneBuilder {
 
+        private String phoneOS;
+        private String phoneManufacturer;
+        private int batteryCapacity;
+        private int phoneIMEI;
+        private String countryOfOrigin;
+
+        public PhoneBuilder(int imei){
+            this.phoneIMEI = imei;
+        }
+
+        public PhoneBuilder withPhoneManufacturer(String phoneManufacturer){
+            this.phoneManufacturer  =  phoneManufacturer;
+            return this;
+        }
+
+        public PhoneBuilder withBatteryCapacity(int batteryCapacity){
+            this.batteryCapacity  =  batteryCapacity;
+            return this;
+        }
+
+        public PhoneBuilder withPhoneOS(String phoneOS){
+            this.phoneOS  =  phoneOS;
+            return this;
+        }
+
+        public PhoneBuilder withCountryOfOrigin(String countryOfOrigin){
+            this.countryOfOrigin  =  countryOfOrigin;
+            return this;
+        }
+
+        public Phone build(){
+            return new Phone(this);
+        }
+}
     @Override
     public String toString() {
-        return  "Phone [os="+ phoneOS + ", batterCapacity=" + batteryCapacity + ", phoneIMEI=" + phoneIMEI +
+        return  "Phone [os="+ this.phoneOS + ", batterCapacity=" + batteryCapacity + ", phoneIMEI=" + phoneIMEI +
                 ", phoneManufacturer=" + phoneManufacturer + ", phoneOrigin=" + countryOfOrigin + "]";
     }
 }

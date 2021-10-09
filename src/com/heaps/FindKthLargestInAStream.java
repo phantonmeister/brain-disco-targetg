@@ -1,4 +1,4 @@
-package com.practice.heaps;
+package heaps;
 
 import java.util.PriorityQueue;
 import java.util.Scanner;

@@ -1,4 +1,4 @@
-package recursion;
+package permutations;
 
 public class GeneratePowerSet {
     public static void printPowerSet(String input, int index, String current){

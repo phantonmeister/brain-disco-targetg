@@ -1,4 +1,4 @@
-package com.practice.bitwise;
+package bitwise;
 
 import javafx.beans.binding.When;
 

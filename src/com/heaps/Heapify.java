@@ -1,4 +1,4 @@
-package com.practice.heaps;
+package heaps;
 
 public class Heapify {
 
@@ -40,15 +40,13 @@ public class Heapify {
         }
     }
 
-    public static void main (String... args) {
+    public static void main(String... args) {
 
         int [] unsortedInput = new int[] {13,5,30,25,40,60,1,5,70};
 
-        buildHeap(unsortedInput);
+         buildHeap(unsortedInput);
 
         for (int e : unsortedInput) {
             System.out.println(e );
         }
-
-    }
-}
+    }}

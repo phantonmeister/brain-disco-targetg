@@ -1,4 +1,4 @@
-package recursion;
+package permutations;
 
 /*
 Given a number N, our task is to print those permutations of integer N which are greater than N.

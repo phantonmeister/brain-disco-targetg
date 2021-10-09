@@ -4,11 +4,10 @@ public class PhoneClient {
 
     public static void main(String... args){
 
-        Phone phone = new PhoneBuilder().withPhoneOS("iOS").
+        Phone phone = new Phone.PhoneBuilder(54321).withPhoneOS("iOS").
                                          withCountryOfOrigin("USA").
                                          withPhoneManufacturer("Google").
-                                         withBatteryCapacity(3500).
-                                         withPhoneIMEI(54321).build();
+                                         withBatteryCapacity(3500).build();
 
         System.out.println(phone.toString());
 

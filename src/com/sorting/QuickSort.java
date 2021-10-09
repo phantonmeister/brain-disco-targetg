@@ -1,7 +1,11 @@
 package sorting;
 
 import java.util.Arrays;
-
+/*
+Assumes element at index 0 is pivot. For some array arrangements running time is n^2.
+TO address this, generate a random number between the bounds of array, use that element as pivot. Exchange it
+with the element at index 0 and continue with regular QuickSort.
+ */
 public class QuickSort {
 
     public static int partition(int[] input, int low, int high) {

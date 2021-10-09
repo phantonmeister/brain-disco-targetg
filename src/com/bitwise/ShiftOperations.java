@@ -1,4 +1,4 @@
-package com.practice.bitwise;
+package bitwise;
 
 import java.awt.*;
 
@@ -32,6 +32,10 @@ public class ShiftOperations {
          int a = 65, b=66, c=67;
 
          int d = (a << 24) | (b << 16) | (c << 8);
+
+         long timestamp = 1387263000 <<(64-41);
+
+        System.out.println(timestamp);
 
         System.out.println("d is "+d);
         System.out.println( (d >> 18)& 0x3f );

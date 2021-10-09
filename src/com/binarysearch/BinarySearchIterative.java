@@ -1,22 +1,19 @@
-package com.practice.binarysearch;
+package binarysearch;
 
 public class BinarySearchIterative {
 
 
     public static int findIndexOfElementInArray(int[] input, int x) {
 
-        int high = input.length;
+        int high = input.length-1;
         int low = 0;
-        int mid ;
-
-        if(x < input[low] || x > input[high-1])
-            return -1;
-        while (low < high) {
-            mid =  (low+high)/2;
-            if(input[mid] == x )
+        while(low <= high) {
+            int mid = (low+high)/2;
+            if(input[mid] == x)
                 return mid;
-            else if (input[mid] < x)
+            else if (input[mid] < x){
                 low = mid+1;
+            }
             else
                 high = mid-1;
         }

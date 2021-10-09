@@ -1,4 +1,4 @@
-package com.practice.heaps;
+package heaps;
 
 import javafx.scene.layout.Priority;
 

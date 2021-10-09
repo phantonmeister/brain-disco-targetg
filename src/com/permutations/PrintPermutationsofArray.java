@@ -1,4 +1,4 @@
-package recursion;
+package permutations;
 
 import java.util.Arrays;
 
@@ -24,7 +24,7 @@ public class PrintPermutationsofArray {
         return inout;
     }
     public static void main(String... args){
-        int[] input = {0,1,2};
+        int[] input = {0,1,2,3};
 
         printArrayCombinations(input, 0, input.length-1);
 

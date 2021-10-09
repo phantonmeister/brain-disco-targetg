@@ -3,7 +3,8 @@ package recursion;
 public class Fibonacci {
 
     /*
-       Time complexity is exponential
+       Time complexity is exponential. 2^n.
+       Just use the iterative method or memoization so that we don't perform redundant calculations.
      */
     static int fibonacci(int n) {
         if(n <= 1)
